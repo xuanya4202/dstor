@@ -1,0 +1,2 @@
+value=`ip addr|grep 172.17.40.|awk '{print $2}'|awk -F "/" '{print $1}'|awk -F "." '{print $4}'`
+hostnamectl set-hostname server$value
